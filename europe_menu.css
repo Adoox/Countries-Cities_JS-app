@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  background: linear-gradient(180deg, #4b6cb7 0%, #182848 100%);
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 1);
+}
+
+.continent_img_box {
+  width: 90%;
+  height: 270px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  /*box-shadow: 0.5rem 0.5rem 2rem rgb(0, 0, 0);*/
+  border-radius: 20px;
+}
+
+.continent_img_box img {
+  width: 100%;
+  height: 270px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1ce73d;
+}
+
+.options_box {
+  width: 50%;
+  height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.option {
+  width: 150px;
+  margin: 3px;
+  text-align: center;
+  border-radius: 20px;
+  /*background: rgba(255, 255, 255, 0.5);*/
+  background: none;
+  color: white;
+  border: 2px solid white;
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.6);
+  margin: 5px;
+}
+
+.option:hover {
+  border: 2px solid #1ce73d;
+}
+
+.option a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  font-size: 15px;
+}

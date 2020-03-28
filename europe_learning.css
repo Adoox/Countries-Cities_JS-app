@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  background: linear-gradient(180deg, #4b6cb7 0%, #182848 100%);
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 1);
+}
+
+.input-box {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.input-box i {
+  font-size: 35px;
+  margin-left: 10px;
+  color: white;
+}
+
+.search_country {
+  line-height: 35px;
+  width: 200px;
+  text-align: center;
+  border-radius: 20px;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.flag_box {
+  width: 300px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border: 2px solid white;
+}
+
+.flag_box img {
+  width: 300px;
+  height: 200px;
+}
+
+#country_name {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.information_box {
+  width: 400px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.center_div {
+  color: white;
+  font-size: 17px;
+  padding: 10px;
+  text-align: center;
+}
+
+#capital_city,
+#region,
+#subregion {
+  padding-bottom: 5px;
+}
+
+#span {
+  color: #1ce73d;
+}
