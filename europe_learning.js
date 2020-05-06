@@ -9,15 +9,15 @@ const population = document.querySelector("#population");
 
 const informations = {};
 
-$(search_country_btn).click(function() {
+$(search_country_btn).click(function () {
   let country_api = `https://restcountries.eu/rest/v2/name/${search_country.value}`; /*dohvacanje podataka uz pomoc vrijednosti drzave koju korisnik unese*/
 
   fetch(country_api)
-    .then(function(response) {
+    .then(function (response) {
       let data = response.json();
       return data;
     })
-    .then(function(data) {
+    .then(function (data) {
       console.log(data);
       informations.flag = data[0].flag;
       informations.country_name = data[0].name;
@@ -26,7 +26,7 @@ $(search_country_btn).click(function() {
       informations.subregion = data[0].subregion;
       informations.population = data[0].population;
     })
-    .then(function() {
+    .then(function () {
       displayAllInformation();
     });
 });
