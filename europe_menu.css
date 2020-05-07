@@ -78,3 +78,80 @@
   padding: 20px;
   font-size: 15px;
 }
+
+/*Mobile View*/
+
+@media screen and (max-width:430px){
+  .container {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .continent_img_box {
+    width: 80%;
+    height: 30%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    /*box-shadow: 0.5rem 0.5rem 2rem rgb(0, 0, 0);*/
+    border-radius: 20px;
+  }
+  
+  .continent_img_box img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .europe-description{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .europe-description h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1ce73d;
+  }
+  
+  .europe-description p{
+    color: #E8E8E8;
+    font-size: 120%;
+  }
+  
+  .options_box {
+    width: 80%;
+    height: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  
+  .option {
+    width: 150px;
+    margin: 3px;
+    text-align: center;
+    border-radius: 20px;
+    /*background: rgba(255, 255, 255, 0.5);*/
+    background: none;
+    color: white;
+    border: 2px solid #010fd3;
+    margin: 5px;
+  }
+  
+  .option:hover {
+    border: 2px solid #1ce73d;
+  }
+  
+  .option a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    font-size: 15px;
+  }
+}
