@@ -4,9 +4,9 @@ const flag_place = document.querySelector(".flag_place");
 const country_name = document.querySelector(".country_name p");
 const input = document.querySelector(".input_place");
 
-const information = {};
+const information = {}; //prazan objekat u kojeg smjestamo sve potrebne informacije
 
-$(click_btn).click(function() {
+$(click_btn).click(function () {
   random = Math.floor(
     Math.random() * 54
   ); /*generisanje random broja koji ce predstavljati odredenu drzavu iz niza*/
@@ -15,11 +15,11 @@ $(click_btn).click(function() {
   let api = `https://restcountries.eu/rest/v2/region/europe`;
 
   fetch(api)
-    .then(function(response) {
+    .then(function (response) {
       let data = response.json();
       return data;
     })
-    .then(function(data) {
+    .then(function (data) {
       console.log(data);
       information.country_flag = data[random].flag;
       information.name = data[random].name;
@@ -30,17 +30,17 @@ $(click_btn).click(function() {
       console.log(slova);
       console.log(slova[0]);
     })
-    .then(function() {
+    .then(function () {
       displayInformation();
     })
-    .then(function() {
+    .then(function () {
       $(input).val(""); /*resertovanje polja za unos*/
       click_btn.setAttribute("disabled", "disabled");
       $(click_btn).css("border", "none");
     });
 });
 
-$(check_btn).click(function() {
+$(check_btn).click(function () {
   /*funckija za provjeru ispravnosti unesenog glavmog grada*/
   console.log(random);
   console.log(capital_city);
