@@ -100,10 +100,118 @@
 @media screen and (max-width:430px){
   .container {
     position: fixed;
-    top: 5%;
+    top: 50px!important;
     left: 0;
     transform: translate(0, 0);
     width: 100%;
     height: 100%;
   }
+
+  nav{
+    height: 40px;
+    position: absolute;
+  }
+  
+  .nav-bar{
+    cursor: pointer;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -40%);
+    -webkit-clip-path: circle(100px at 90% -40%);
+    background-color: black;
+    pointer-events: none;
+    justify-content: flex-start;
+  }
+  
+  .hamburger{
+    position: absolute;
+    z-index: 1111;
+    background-color: none;
+    width: 100%;
+    height: 40px;
+    text-align: right;
+  }
+  
+  .hamburger i{
+    z-index: 1111;
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+    padding-right: 20px;
+    padding-top: 8px;
+  }
+  
+  .nav-bar.open{
+    clip-path: circle(100px at 90% -40%);
+    -webkit-clip-path: circle(800px at 90% -40%);
+    pointer-events: all;
+    z-index: 10;
+  
+  }
+  
+  .nav-bar li a{
+    color: white;
+  }
+  
+  .nav-bar li{
+    opacity: 0;
+    padding: 15px 0;
+  }
+  
+  
+  .nav-bar li:nth-child(1){
+    transition: all 0.3s ease 0.1s;
+  }
+  
+  .nav-bar li:nth-child(2){
+    transition: all 0.3s ease 0.2s;
+  }
+  
+  .nav-bar li:nth-child(3){
+    transition: all 0.3s ease 0.3s;
+  }
+  
+  .nav-bar li:nth-child(4){
+    transition: all 0.3s ease 0.4s;
+  }
+  
+  .nav-bar li:nth-child(5){
+    transition: all 0.3s ease 0.5s;
+  }
+  
+  .nav-bar li:nth-child(6){
+    transition: all 0.3s ease 0.6s;
+  }
+  
+  .nav-bar li:nth-child(7){
+    transition: all 0.3s ease 0.7s;
+  }
+  
+  .nav-bar li:nth-child(8){
+    transition: all 0.3s ease 0.8s;
+  }
+  
+  .nav-bar li:nth-child(9){
+    transition: all 0.3s ease 0.9s;
+  }
+  
+  li.fade{
+    opacity: 1;
+  }
+  
+  .nav-bar li:first-child{
+    padding-top: 50px;
+  }
 }
+
+
+  /*Desktop style*/
+  @media only screen and (min-width:961px){
+    .hamburger{
+       display: none;
+    }
+}
+  
