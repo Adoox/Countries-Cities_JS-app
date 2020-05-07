@@ -84,7 +84,7 @@
 @media screen and (max-width:430px){
   .container {
     position: fixed;
-    top: 10%;
+    top: 0;
     left: 0;
     transform: translate(0, 0);
     width: 100%;
@@ -134,6 +134,7 @@
   
   .option {
     width: 150px;
+    padding: 10px;
     margin: 3px;
     text-align: center;
     border-radius: 20px;
