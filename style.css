@@ -333,7 +333,7 @@ nav{
     display: flex;
     width: 90%;
     height: 35%;
-    margin: 0 auto 5px;
+    margin: 0 auto;
   }
   
   
@@ -363,9 +363,9 @@ nav{
   }
   
   .about-continets{
-    width: 90%;
+    width: 96%;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 10px;
   }
   
   .about-continets p{
