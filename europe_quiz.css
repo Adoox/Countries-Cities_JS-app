@@ -95,10 +95,9 @@
       }
       
       .text-input-box{
-        width: 70%;
+        width: 100%;
         position: absolute;
-        left: 15%;
-        top: 37vh;
+        top: 40vh;
         text-align: center;
       }
       
