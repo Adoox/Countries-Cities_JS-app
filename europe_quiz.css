@@ -100,7 +100,7 @@
       }
       
       .options-buttons-box {
-        width: 60%;
+        width: 70%;
         height: 100px;
         margin-top: -30px;
         margin-left: auto;
@@ -109,6 +109,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        background-color: pink;
       }
       
       #button1 {
