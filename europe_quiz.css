@@ -278,12 +278,14 @@
       }
 
       .press-next-to-start{
-        position: fixed;
-        bottom: 10px;
-        margin: 0 auto;
-        width: 90%;
+        position: absolute;
+        text-align: center;
+        top: 85vh;
+        width: 80%;
+        left: 10%;
         text-align: center;
         color: white;
+        background-color: purple;
       }
 
       .help-box{
