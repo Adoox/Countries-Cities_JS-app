@@ -100,12 +100,13 @@
       }
       
       .options-buttons-box {
-        width: 80%;
-        height: 50px;
+        width: 60%;
+        height: 100px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
       }
       
@@ -124,6 +125,19 @@
         width: 100px;
         font-size: 15px;
         font-weight: bold;
+        border: 1px solid greenyellow
+      }
+
+      #button3 {
+        padding: 2px;
+        border-radius: 10px;
+        width: 100px;
+        margin-top: 10px;
+        font-size: 15px;
+        background: none;
+        border: 1px solid white;
+        color: white;
+        background-color: #F72F7B;
       }
       
       .flag_place {
@@ -264,6 +278,13 @@
 
       .press-next-to-start{
         margin: 30px auto;
+        width: 90%;
+        text-align: center;
+        color: white;
+      }
+
+      .help-box{
+        margin: 15px auto;
         width: 90%;
         text-align: center;
         color: white;

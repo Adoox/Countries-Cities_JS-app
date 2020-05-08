@@ -1,9 +1,11 @@
 const click_btn = document.querySelector("#button1");
 const check_btn = document.querySelector("#button2");
+const help_btn = document.querySelector("#button3");
 const flag_place = document.querySelector(".flag_place");
 const country_name = document.querySelector(".country_name p");
 const input = document.querySelector(".input_place");
 const press_next = document.querySelector(".press-next-to-start");
+const help_msg = document.querySelector("#help-msg");
 
 const information = {}; //prazan objekat u kojeg smjestamo sve potrebne informacije
 
@@ -39,6 +41,7 @@ $(click_btn).click(function () {
       $(click_btn).css("border", "none");
     });
   press_next.remove(); //brisanje diva sa tekstom "press next button to start quiz" nakon sto pokrenemo kviz
+  removeHelp_msg();//pritiskom na next button pozivamo funkciju kojom brisemo help poruke za prethodni grad
 });
 
 
@@ -67,7 +70,24 @@ $(check_btn).click(function () {
   }
 });
 
+$(help_btn).click(function () {
+  getHelp();
+});
+
+
 function displayInformation() {
   flag_place.innerHTML = `<img src="${information.country_flag}"/>`;
   country_name.innerHTML = `${information.name}`;
+}
+
+//funkcija za ispis pomoci
+//pomoc se sastoji od broja slova koliko grad ima u svom sastavu
+//pored broja slova tu je i prvo i zadnje slovo rijeci
+function getHelp() {
+  help_msg.innerHTML = `<span>Number of letters: ${capital_city.length} </span></br><span>First letter: ${slova[0].toUpperCase()} </span></br><span>Last letter: ${slova[capital_city.length - 1]} </span>`;
+}
+
+//funkcija za brisanje poruka za pomoc
+function removeHelp_msg() {
+  help_msg.innerHTML = `<span></span>`;
 }
