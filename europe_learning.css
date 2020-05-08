@@ -205,6 +205,21 @@
   .nav-bar li:first-child{
     padding-top: 50px;
   }
+
+  .type-name-to-search{
+    width: 80%;
+    text-align: center;
+    color: white;
+    margin: 30px auto;
+  }
+
+  .error-box{
+    width: 80%;
+    text-align: center;
+    margin: 30px auto;
+    color: red;
+    font-weight: bold;
+  }
 }
 
 
@@ -212,6 +227,29 @@
   @media only screen and (min-width:961px){
     .hamburger{
        display: none;
+    }
+
+    .error-box{
+      width: 80%;
+      text-align: center;
+      margin: 30px auto;
+      color: red;
+      font-weight: bold;
+    }
+
+    .error-box p{
+      font-size: 120%;
+    }
+
+    .type-name-to-search{
+      width: 80%;
+      text-align: center;
+      color: white;
+      margin: 30px auto;
+    }
+
+    .type-name-to-search p{
+      font-size: 120%;
     }
 }
   

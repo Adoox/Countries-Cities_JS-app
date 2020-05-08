@@ -253,9 +253,6 @@
         transition: all 0.3s ease 0.8s;
       }
       
-      .nav-bar li:nth-child(9){
-        transition: all 0.3s ease 0.9s;
-      }
       
       li.fade{
         opacity: 1;
@@ -264,6 +261,14 @@
       .nav-bar li:first-child{
         padding-top: 50px;
       }
+
+      .press-next-to-start{
+        margin: 30px auto;
+        width: 90%;
+        text-align: center;
+        color: white;
+      }
+
   }
   
 
@@ -271,6 +276,17 @@
 @media only screen and (min-width:961px){
     .hamburger{
        display: none;
+    }
+
+    .press-next-to-start{
+      margin: 30px auto;
+      width: 90%;
+      text-align: center;
+      color: white;
+    }
+
+    .press-next-to-start p{
+      font-size: 120%;
     }
 }
   

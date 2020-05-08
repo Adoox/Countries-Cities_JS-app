@@ -3,6 +3,7 @@ const check_btn = document.querySelector("#button2");
 const flag_place = document.querySelector(".flag_place");
 const country_name = document.querySelector(".country_name p");
 const input = document.querySelector(".input_place");
+const press_next = document.querySelector(".press-next-to-start");
 
 const information = {}; //prazan objekat u kojeg smjestamo sve potrebne informacije
 
@@ -13,7 +14,6 @@ $(click_btn).click(function () {
   //let api = "https://restcountries.eu/rest/v2/all";
   /*let api = `https://restcountries.eu/rest/v2/name/Croatia`;*/
   let api = `https://restcountries.eu/rest/v2/region/europe`;
-
   fetch(api)
     .then(function (response) {
       let data = response.json();
@@ -38,7 +38,9 @@ $(click_btn).click(function () {
       click_btn.setAttribute("disabled", "disabled");
       $(click_btn).css("border", "none");
     });
+  press_next.remove(); //brisanje diva sa tekstom "press next button to start quiz" nakon sto pokrenemo kviz
 });
+
 
 $(check_btn).click(function () {
   /*funckija za provjeru ispravnosti unesenog glavmog grada*/
