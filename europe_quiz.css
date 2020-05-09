@@ -99,6 +99,11 @@
         text-align: center;
         position: absolute;
       }
+
+      ::placeholder{
+        color: white;
+        opacity: 0.9;
+      }
       
       .options-buttons-box {
         width: 75%;
@@ -148,9 +153,13 @@
         margin-top: 10px;
         font-size: 15px;
         background: none;
-        border: 1px solid white;
+        border: none;
         color: white;
-        background-color: #33a747;
+        background-color: #6dc53a;
+      }
+
+      #button3:hover{
+        background-color: #58ad26;
       }
 
       #button4 {
@@ -160,9 +169,13 @@
         margin-top: 10px;
         font-size: 15px;
         background: none;
-        border: 1px solid white;
+        border: none;
         color: white;
         background-color: #F72F7B;
+      }
+
+      #button4:hover{
+        background-color: rgb(187, 29, 90);
       }
       
       .flag_place {
