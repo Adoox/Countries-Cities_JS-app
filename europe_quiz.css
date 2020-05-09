@@ -87,7 +87,7 @@
   @media screen and (max-width:430px){
     .main_div {
         position: fixed;
-        top: 50px;
+        top: 5vh;
         left: 0;
         transform: translate(0, 0);
         width: 100%;
@@ -107,8 +107,8 @@
         position: absolute;
         left: 15%;
         top: 60vh;
-        margin-top: 15px;
-        /*margin-top: -30px;
+        /*margin-top: 15px;
+        margin-top: -30px;
         margin-left: auto;
         margin-right: auto;*/
         text-align: center;
