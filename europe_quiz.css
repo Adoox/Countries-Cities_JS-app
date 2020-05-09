@@ -96,7 +96,7 @@
       
       .text-input-box{
         width: 100%;
-        position: absolute;
+        position: fixed;
         top: 40vh;
         text-align: center;
       }
@@ -104,7 +104,7 @@
       .options-buttons-box {
         width: 70%;
         height: 100px;
-        position: absolute;
+        position: fixed;
         left: 15%;
         top: 60vh;
         /*margin-top: -30px;
@@ -283,7 +283,7 @@
       }
 
       .press-next-to-start{
-        position: absolute;
+        position: fixed;
         text-align: center;
         top: 85vh;
         width: 80%;
@@ -293,7 +293,7 @@
       }
 
       .help-box{
-        position: absolute;
+        position: fixed;
         text-align: center;
         top: 80vh;
         width: 80%;
