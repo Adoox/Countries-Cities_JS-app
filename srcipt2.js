@@ -7,6 +7,7 @@ const country_name = document.querySelector(".country_name p");
 const input = document.querySelector(".input_place");
 const press_next = document.querySelector(".press-next-to-start");
 const help_msg = document.querySelector("#help-msg");
+const empty_eror = document.querySelector("#empty_value");
 const options_box = document.querySelector(".options-buttons-box");
 
 const information = {}; //prazan objekat u kojeg smjestamo sve potrebne informacije
@@ -70,10 +71,18 @@ $(check_btn).click(function () {
     ); /*postavljanje vrijednosti "disable" na button kada je odgovor netacan*/
     $(click_btn).css("border", "3px solid red");
   }
+
+  if (input_value == "") {
+    removeHelp_msg();
+    empty_value();
+  } else {
+    remove_empy_error();
+  }
 });
 
 $(help_btn).click(function () {
   getHelp();
+  remove_empy_error();
 });
 
 $(skip_btn).click(function () {
@@ -102,6 +111,7 @@ $(skip_btn).click(function () {
     });
   press_next.remove(); //brisanje diva sa tekstom "press next button to start quiz" nakon sto pokrenemo kviz
   removeHelp_msg();//pritiskom na next button pozivamo funkciju kojom brisemo help poruke za prethodni grad
+  remove_empy_error();
 });
 
 
@@ -122,3 +132,10 @@ function removeHelp_msg() {
   help_msg.innerHTML = `<span></span>`;
 }
 
+function empty_value() {
+  empty_eror.innerHTML = `<span>Error: Empty Value!</span>`;
+}
+
+function remove_empy_error() {
+  empty_eror.innerHTML = `<span></span>`;
+}

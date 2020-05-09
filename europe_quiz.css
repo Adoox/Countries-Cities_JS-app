@@ -323,6 +323,16 @@
         width: 80%;
       }
 
+      .error-empty{
+        position: absolute;
+         top: 85vh;
+         left: 10%;
+         text-align: center;
+         color: red;
+         font-weight: bold;
+         width: 80%;
+       }
+
       .help-box{
         position: fixed;
         text-align: center;
