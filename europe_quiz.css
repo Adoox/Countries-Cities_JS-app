@@ -96,25 +96,26 @@
       
       .text-input-box{
         width: 100%;
-        position: absolute;
-        top: 40vh;
         text-align: center;
       }
       
       .options-buttons-box {
         width: 70%;
         height: 100px;
-        position: absolute;
+        /*position:absolute;
         left: 15%;
-        bottom: 160px;
+        top: 60vh;*/
         /*margin-top: 15px;
         margin-top: -30px;
         margin-left: auto;
         margin-right: auto;*/
+        position: relative;
+        bottom: -30px;
         text-align: center;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        background-color: yellow;
       }
       
       #button1 {
@@ -284,13 +285,14 @@
       }
 
       .press-next-to-start{
-        position: absolute;
-        text-align: center;
-        bottom: 70px;
-        width: 80%;
+        /*position: absolute;
+        bottom: 70px;*/
         left: 10%;
+        position: relative;
+        bottom: -80px;
         text-align: center;
         color: white;
+        width: 80%;
       }
 
       .help-box{
