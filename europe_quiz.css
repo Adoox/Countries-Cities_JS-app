@@ -361,6 +361,16 @@
 
   /*Desktop style*/
 @media only screen and (min-width:961px){
+
+    .main_div {
+      position: absolute;
+      top: 50vh;
+      /*top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);*/
+      width: 40%;
+    }
+
     .hamburger{
        display: none;
     }
@@ -377,8 +387,8 @@
     }
 
     .options-buttons-box {
-      width: 60%;
-      height: 50px;
+      width: 90%;
+      height: 10%;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
@@ -420,8 +430,8 @@
 
     .help-box{
       color: white;
-      width: 40%;
-      margin: 30px auto;
+      width: 90%;
+      margin: 0 auto;
       text-align: center;
       font-size: 18px;
       outline: hidden;
@@ -429,15 +439,15 @@
 
     .error-empty{
       color: white;
-      width: 40%;
-      margin: 30px auto;
+      width: 90%;
+      margin: 0 auto;
       text-align: center;
       font-size: 18px;
       outline: hidden;
     }
 
     .flag_place {
-      width: 50%;
+      width: 70%;
       height: 60%;
       margin-left: auto;
       margin-right: auto;
