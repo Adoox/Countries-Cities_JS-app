@@ -6,6 +6,7 @@ const country_name = document.querySelector(".country_name p");
 const input = document.querySelector(".input_place");
 const press_next = document.querySelector(".press-next-to-start");
 const help_msg = document.querySelector("#help-msg");
+const options_box = document.querySelector(".options-buttons-box");
 
 const information = {}; //prazan objekat u kojeg smjestamo sve potrebne informacije
 
@@ -91,3 +92,4 @@ function getHelp() {
 function removeHelp_msg() {
   help_msg.innerHTML = `<span></span>`;
 }
+

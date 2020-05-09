@@ -96,15 +96,15 @@
       
       .text-input-box{
         width: 100%;
+        margin-top: 5%;
         text-align: center;
+        position: absolute;
       }
       
       .options-buttons-box {
         width: 75%;
         height: 100px;
-        position:absolute;
-        left: 12%;
-        top: 60vh;
+        margin-top: 50%;
         /*margin-top: 15px;
         margin-top: -30px;
         margin-left: auto;
@@ -114,6 +114,15 @@
         flex-wrap: wrap;
         justify-content: space-around;
       }
+
+      .options-buttons-box.display_none{
+        display: none;
+      }
+
+      .options-buttons-box.display{
+        display: flex;
+      }
+
       
       #button1 {
         padding: 10px;
@@ -282,9 +291,10 @@
       }
 
       .press-next-to-start{
-        position: absolute;
+       /*position: absolute;
         top: 85vh;
-        left: 10%;
+        left: 10%;*/
+        margin:20% auto;
         text-align: center;
         color: white;
         width: 80%;
