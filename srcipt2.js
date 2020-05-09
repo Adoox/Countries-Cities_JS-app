@@ -139,3 +139,8 @@ function empty_value() {
 function remove_empy_error() {
   empty_eror.innerHTML = `<span></span>`;
 }
+
+$(input).click(function () {
+  removeHelp_msg();
+  remove_empy_error();
+})
