@@ -87,7 +87,7 @@
   @media screen and (max-width:430px){
     .main_div {
         position: fixed;
-        top: 5vh;
+        top: 50px;
         left: 0;
         transform: translate(0, 0);
         width: 100%;
@@ -106,7 +106,7 @@
         height: 100px;
         position: absolute;
         left: 15%;
-        top: 60vh;
+        bottom: 160px;
         /*margin-top: 15px;
         margin-top: -30px;
         margin-left: auto;
@@ -284,9 +284,9 @@
       }
 
       .press-next-to-start{
-        position: fixed;
+        position: absolute;
         text-align: center;
-        top: 85vh;
+        bottom: 70px;
         width: 80%;
         left: 10%;
         text-align: center;
