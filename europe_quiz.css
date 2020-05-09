@@ -96,7 +96,7 @@
       
       .text-input-box{
         width: 100%;
-        position: fixed;
+        position: absolute;
         top: 40vh;
         text-align: center;
       }
@@ -104,9 +104,10 @@
       .options-buttons-box {
         width: 70%;
         height: 100px;
-        position: fixed;
+        position: absolute;
         left: 15%;
         top: 60vh;
+        margin-top: 15px;
         /*margin-top: -30px;
         margin-left: auto;
         margin-right: auto;*/
