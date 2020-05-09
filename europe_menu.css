@@ -94,12 +94,12 @@ nav{
   /*background: rgba(255, 255, 255, 0.5);*/
   background: none;
   color: white;
-  border: 2px solid #010fd3;
+  border: 2px solid #1ce73d;
   margin: 5px;
 }
 
 .option:hover {
-  border: 2px solid #1ce73d;
+  border: 2px solid #010fd3;
 }
 
 .option a {
@@ -297,5 +297,20 @@ nav{
 @media only screen and (min-width:961px){
   .hamburger{
      display: none;
+  }
+
+  .options_box {
+    position: absolute;
+    top: 60vh;
+    width: 60%;
+    height: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    left: 20%;
+    justify-content: space-around;
+  }
+
+  .europe-description{
+    width: 90%;
   }
 }

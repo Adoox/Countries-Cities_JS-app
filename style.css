@@ -526,4 +526,17 @@ nav{
   .hamburger{
     display: none;
   }
+
+  .content-box{
+    position: fixed;
+    top: 40vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 70%;
+  }
+
+  .container {
+    width: 60%;
+  }
 }
