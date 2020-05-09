@@ -22,6 +22,11 @@
   justify-content: center;
 }
 
+::placeholder{
+  color: white;
+  opacity: 0.9;
+}
+
 .input-box i {
   font-size: 35px;
   margin-left: 10px;
@@ -70,13 +75,12 @@
 .center_div {
   color: white;
   font-size: 17px;
-  padding: 10px;
-  text-align: justify;
+  text-align: center;
 }
 
 #capital_city,
 #region,
-#subregion {
+#subregion{
   padding-bottom: 5px;
 }
 
@@ -106,6 +110,17 @@
     width: 100%;
     height: 100%;
   }
+
+
+  .information_box {
+    width: 75%;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+  }
+  
 
   nav{
     height: 40px;
@@ -210,13 +225,17 @@
     width: 80%;
     text-align: center;
     color: white;
-    margin: 30px auto;
+    position: absolute;
+    top: 80vh;
+    left: 10%;
   }
 
   .error-box{
     width: 80%;
     text-align: center;
-    margin: 30px auto;
+    position: absolute;
+    top: 80vh;
+    left: 10%;
     color: red;
     font-weight: bold;
   }

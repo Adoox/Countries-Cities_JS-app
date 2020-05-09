@@ -128,6 +128,7 @@ nav{
     margin-bottom: 20px;
     /*box-shadow: 0.5rem 0.5rem 2rem rgb(0, 0, 0);*/
     border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
   }
   
   .continent_img_box img {
@@ -136,7 +137,7 @@ nav{
   }
   
   .europe-description{
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 20px;
@@ -154,11 +155,13 @@ nav{
   }
   
   .options_box {
+    position: absolute;
+    top: 75vh;
     width: 90%;
     height: 8%;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    left: 5%;
     justify-content: space-around;
   }
   
