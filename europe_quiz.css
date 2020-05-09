@@ -42,9 +42,11 @@
     width: 100px;
     font-size: 15px;
     font-weight: bold;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
   }
   
-  .flag_place {
+  /*.flag_place {
     width: 300px;
     height: 200px;
     margin-left: auto;
@@ -57,7 +59,7 @@
   .flag_place img {
     width: 300px;
     height: 200px;
-  }
+  }*/
   
   .country_name {
     text-align: center;
@@ -82,6 +84,11 @@
     border: 3px solid #1ce73d;
     font-size: 15px;
     color: white;
+  }
+
+  ::placeholder{
+    color: white;
+    opacity: 0.9;
   }
 
   @media screen and (max-width:430px){
@@ -367,6 +374,81 @@
 
     .press-next-to-start p{
       font-size: 120%;
+    }
+
+    .options-buttons-box {
+      width: 60%;
+      height: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #button3 {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      width: 100px;
+      font-size: 15px;
+      font-weight: bold;
+      color: white;
+      background-color: #6dc53a;
+      outline: hidden;
+    }
+
+    #button3:hover{
+      background-color: #58ad26;
+    }
+
+    #button4 {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      width: 100px;
+      font-size: 15px;
+      font-weight: bold;
+      color: white;
+      background-color: #F72F7B;
+      outline: hidden;
+    }
+
+    #button4:hover{
+      background-color: rgb(187, 29, 90);
+    }
+
+    .help-box{
+      color: white;
+      width: 40%;
+      margin: 30px auto;
+      text-align: center;
+      font-size: 18px;
+      outline: hidden;
+    }
+
+    .error-empty{
+      color: white;
+      width: 40%;
+      margin: 30px auto;
+      text-align: center;
+      font-size: 18px;
+      outline: hidden;
+    }
+
+    .flag_place {
+      width: 50%;
+      height: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      border: 2px solid white;
+    }
+
+    .flag_place img {
+      width: 100%;
+      height: 100%;
     }
 }
   
