@@ -103,7 +103,7 @@
       .options-buttons-box {
         width: 75%;
         height: 100px;
-        margin-top: 40%;
+        margin-top: 45%;
         /*margin-top: 15px;
         margin-top: -30px;
         margin-left: auto;
@@ -138,10 +138,22 @@
         width: 100px;
         font-size: 15px;
         font-weight: bold;
-        border: 1px solid greenyellow
+        border: none;
       }
 
       #button3 {
+        padding: 2px;
+        border-radius: 10px;
+        width: 100px;
+        margin-top: 10px;
+        font-size: 15px;
+        background: none;
+        border: 1px solid white;
+        color: white;
+        background-color: #33a747;
+      }
+
+      #button4 {
         padding: 2px;
         border-radius: 10px;
         width: 100px;

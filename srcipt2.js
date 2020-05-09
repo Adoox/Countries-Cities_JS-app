@@ -1,6 +1,7 @@
 const click_btn = document.querySelector("#button1");
 const check_btn = document.querySelector("#button2");
 const help_btn = document.querySelector("#button3");
+const skip_btn = document.querySelector("#button4");
 const flag_place = document.querySelector(".flag_place");
 const country_name = document.querySelector(".country_name p");
 const input = document.querySelector(".input_place");
@@ -73,6 +74,34 @@ $(check_btn).click(function () {
 
 $(help_btn).click(function () {
   getHelp();
+});
+
+$(skip_btn).click(function () {
+  random = Math.floor(
+    Math.random() * 54
+  ); /*generisanje random broja koji ce predstavljati odredenu drzavu iz niza*/
+  let api = `https://restcountries.eu/rest/v2/region/europe`;
+  fetch(api)
+    .then(function (response) {
+      let data = response.json();
+      return data;
+    })
+    .then(function (data) {
+      console.log(data);
+      information.country_flag = data[random].flag;
+      information.name = data[random].name;
+      capital_city = data[random].capital;
+      capital_city_lowerCase = capital_city.toLowerCase();
+      slova = capital_city_lowerCase.split("");
+      console.log(capital_city);
+      console.log(slova);
+      console.log(slova[0]);
+    })
+    .then(function () {
+      displayInformation();
+    });
+  press_next.remove(); //brisanje diva sa tekstom "press next button to start quiz" nakon sto pokrenemo kviz
+  removeHelp_msg();//pritiskom na next button pozivamo funkciju kojom brisemo help poruke za prethodni grad
 });
 
 
