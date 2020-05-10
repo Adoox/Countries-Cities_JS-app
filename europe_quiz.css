@@ -166,13 +166,13 @@
         font-size: 15px;
         background: none;
         border: none;
-        color: white;
+        color: #1ce73d;
         /*background-color: #6dc53a;*/
-        border: 3px solid #6dc53a;
+        border: 3px solid white;
       }
 
       #button3:hover{
-        background-color: #58ad26;
+        border: 3px solid #1ce73d;
       }
 
       #button4 {
@@ -183,13 +183,13 @@
         font-size: 15px;
         background: none;
         border: none;
-        color: white;
+        color: #F72F7B;
         /*background-color: #F72F7B;*/
-        border: 3px solid #F72F7B;
+        border: 3px solid white;
       }
 
       #button4:hover{
-        background-color: rgb(187, 29, 90);
+        border: 3px solid #F72F7B;
       }
       
       .flag_place {
