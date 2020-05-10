@@ -397,6 +397,17 @@
       margin-bottom: 30px;
     }
 
+    #button2 {
+      background: rgba(0, 0, 0, 0.6);;
+      border: none;
+      color: white;
+      border: none;
+    }
+
+    #button2:hover{
+      border: 2px solid white;
+    }
+
     #button3 {
       padding: 10px;
       border-radius: 10px;
@@ -412,7 +423,7 @@
     }
 
     #button3:hover{
-      background-color: #58ad26;
+      background-color: #3d9c4a;
     }
 
     #button4 {
