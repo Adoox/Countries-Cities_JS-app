@@ -264,7 +264,7 @@
     .error-box{
       width: 80%;
       text-align: center;
-      margin: 30px auto;
+      margin: 10px auto;
       color: red;
       font-weight: bold;
     }
@@ -277,11 +277,49 @@
       width: 80%;
       text-align: center;
       color: white;
-      margin: 30px auto;
+      margin: 10px auto;
     }
 
     .type-name-to-search p{
       font-size: 120%;
     }
+
+    .container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      height: 50%;
+    }
+    
+    .flag_box {
+      width: 50%;
+      height: 45%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      border: none;
+    }
+
+    .flag_box img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .information_box {
+      width: 40%;
+      height: 20%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      padding-top: 20px;
+    }
+    
+
+
 }
   
