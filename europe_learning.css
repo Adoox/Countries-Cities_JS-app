@@ -254,6 +254,124 @@
   }
 }
 
+ /*Tablet Style*/
+ @media only screen and (min-width:431px) and (max-width:960px){
+  .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .input-box {
+    text-align: center;
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  ::placeholder{
+    color: white;
+    opacity: 0.9;
+  }
+  
+  .input-box i {
+    font-size: 35px;
+    margin-left: 10px;
+    color: white;
+  }
+  
+  .search_country {
+    line-height: 35px;
+    width: 250px;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid white;
+    background: none;
+    color: white;
+  }
+  
+  .flag_box {
+    width: 60%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: 2px solid white;
+  }
+  
+  .flag_box img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #country_name {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .information_box {
+    width: 75%;
+    padding: 15px;
+    margin: 0 auto;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+  }
+  
+  .center_div {
+    color: white;
+    font-size: 17px;
+    text-align: center;
+  }
+  
+  #capital_city,
+  #region,
+  #subregion{
+    padding-bottom: 5px;
+  }
+  
+  #span {
+    color: #1ce73d;
+  }
+  
+  #btn_search{
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 2px solid #1ce73d;
+    padding: 10px;
+    background: none;
+  }
+  
+  #btn_search a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .type-name-to-search{
+    width: 80%;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 82vh;
+    left: 10%;
+  }
+
+  .error-box{
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    top: 82vh;
+    left: 10%;
+    color: red;
+    font-weight: bold;
+  }
+ }
+
 
   /*Desktop style*/
   @media only screen and (min-width:961px){
