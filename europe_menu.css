@@ -207,6 +207,7 @@ nav{
      padding: 12px;
      margin: 3px;
      text-align: center;
+     background-color: rgba(0, 19, 69,0.5 );
      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 8px 10px rgba(22, 22, 22, 0.329);
    }
 
@@ -341,6 +342,7 @@ nav{
 
   .option{
     margin: 0 5%;
+    background-color: rgba(0, 19, 69,0.5 );
   }
 
   .europe-description{
