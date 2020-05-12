@@ -16,6 +16,11 @@
     margin: 0 auto;
     text-align: center;
   }
+
+  input{
+    border: none;
+    outline: none;
+  }
   
   .options-buttons-box {
     width: 30%;
@@ -25,6 +30,16 @@
     text-align: center;
     display: flex;
     justify-content: space-around;
+  }
+
+  #button1,#button2,#button3,#buttton4{
+    overflow: hidden;
+    border: none;
+    outline: none;
+  }
+
+  #button1,#button2,#button3,#buttton4:hover{
+    cursor: pointer;
   }
   
   #button1 {
@@ -36,6 +51,7 @@
     border: 2px solid white;
     color: white;
   }
+
   #button2 {
     padding: 10px;
     border-radius: 10px;
@@ -135,6 +151,11 @@
         display: flex;
       }
 
+      #button1,#button2,#button3,#buttton4{
+        border: none;
+        outline: none;
+      }
+
       
       #button1 {
         padding: 10px;
@@ -192,6 +213,7 @@
         /* color: #F72F7B; */
         background-color: rgba(219, 9, 67,1);
         /* border: 3px solid white; */
+        outline: none;
       }
 
       #button4:hover{
@@ -607,11 +629,12 @@
       color: white;
       /*background-color: #F72F7B;*/
       background-color: rgba(219, 9, 67,1);
-      outline: hidden;
+      outline: none;
     }
 
     #button4:hover{
       border: 2px solid white;
+      cursor: pointer;
     }
 
     .help-box{

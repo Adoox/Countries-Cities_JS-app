@@ -84,6 +84,7 @@
   background-color: #F72F7B ;
   color: white;
   font-size: 15px;
+  overflow: hidden;
 }
 
 .button-box button:hover{
