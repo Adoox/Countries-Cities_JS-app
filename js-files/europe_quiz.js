@@ -180,7 +180,7 @@ function show_capital_city() {
 //pritiskom na input polje brisemo help poruku i error poruku
 $(input).click(function () {
   removeHelp_msg();
-  remove_empy_error();
+  remove_empty_error();
 })
 
 

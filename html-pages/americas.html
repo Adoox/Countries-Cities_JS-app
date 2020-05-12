@@ -5,13 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Europe Menu</title>
-  <link rel="stylesheet" href="/style-css/europe_menu.css" />
+  <link rel="stylesheet" href="/style-css/style.css" />
   <link rel="stylesheet" href="/style-css/animated.css">
-  <link rel="stylesheet" href="/style-css/style.css">
+  <link rel="stylesheet" href="/style-css/europe_quiz.css">
+  <script src="https://kit.fontawesome.com/a93704d780.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/a93704d780.js" crossorigin="anonymous"></script>
+  <title>Americas Quiz</title>
 </head>
 
 <body>
@@ -43,24 +43,35 @@
       <li><a href="/html-pages/oceania.html">Oceania</a></li>
     </ul>
   </nav>
-  <div class="container">
-    <div class="continent_img_box">
-      <img src="/images/europe1.png" />
+  <div class="main_div">
+    <div class="flag_place">
+      <img src="/images/quiz-img.jpg" />
     </div>
-    <div class="europe-description">
-      <h1>Europe</h1>
-      <p>Select one of the options. If you want to learn about european countries, prees te "learning" button below
-        and
-        start searching for any country fou want in Europe. On the other side if you want to test yourselft, press the
-        "quiz" button and start quiz with random european countries!</p>
+    <div class="text-input-box">
+      <div class="country_name">
+        <p>---</p>
+      </div>
+      <div class="input_box">
+        <input type="text" placeholder="Capital city?" class="input_place" />
+      </div>
     </div>
-    <div class="options_box">
-      <button id="learning" class="option">
-        <a href="/html-pages/eurupe_learning.html">Learning</a>
-      </button>
-      <button id="quiz" class="option"><a href="/html-pages/europe.html">Quiz</a></button>
+    <div class="options-buttons-box">
+      <button id="button1">Next</button>
+      <button id="button2">Check</button>
+      <button id="button3">Hint</button>
+      <button id="button4">Skip</button>
+    </div>
+    <div class="press-next-to-start">
+      <p>Press "next" button to start quiz!</p>
+    </div>
+    <div class="error-empty">
+      <p id="empty_value"></p>
+    </div>
+    <div class="help-box">
+      <p id="help-msg"></p>
     </div>
   </div>
+  <script src="/js-files/americas_quiz.js"></script>
   <script src="/js-files/navbar.js"></script>
 </body>
 

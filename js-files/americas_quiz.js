@@ -1,5 +1,3 @@
-/*Asia-quiz*/
-
 const click_btn = document.querySelector("#button1");
 const check_btn = document.querySelector("#button2");
 const help_btn = document.querySelector("#button3");
@@ -18,7 +16,9 @@ $(click_btn).click(function () {
     random = Math.floor(
         Math.random() * 54
     ); /*generisanje random broja koji ce predstavljati odredenu drzavu iz niza*/
-    let api = `https://restcountries.eu/rest/v2/region/asia`;//rest api za drzave azije
+    //let api = "https://restcountries.eu/rest/v2/all";
+    /*let api = `https://restcountries.eu/rest/v2/name/Croatia`;*/
+    let api = `https://restcountries.eu/rest/v2/region/americas`;
     fetch(api)
         .then(function (response) {
             let data = response.json();
@@ -76,7 +76,7 @@ $(check_btn).click(function () {
         removeHelp_msg();
         empty_value();
     } else {
-        remove_empy_error();
+        remove_empty_error();
     }
 });
 
@@ -89,11 +89,11 @@ $(skip_btn).click(function () {
     random = Math.floor(
         Math.random() * 54
     ); /*generisanje random broja koji ce predstavljati odredenu drzavu iz niza*/
-    let api = `https://restcountries.eu/rest/v2/region/asia`;
-    fetch(api)
-        .then(function (response) {
-            let data = response.json();
-            return data;
+    let api = `https://restcountries.eu/rest/v2/region/americas`;
+    fetch(api)//dohvacanje apija
+        .then(function (response) {//prosljedivanje odgovora odnosno zahtjeva samog apija
+            let data = response.json();//podatke koje smo povukli transformisemo u json format kako bi ih mogli citati
+            return data;//vracamo podatke u jason formatu koje cemo koristiti u nastavku programa
         })
         .then(function (data) {
             console.log(data);
@@ -107,10 +107,10 @@ $(skip_btn).click(function () {
             console.log(slova[0]);
         })
         .then(function () {
-            //prikaz svih informacija obavit ce se 2 sekunde kasnije nakon sto je odabrana opcija "skip"
             setTimeout(function () {
                 displayInformation();
             }, 2000);
+            // displayInformation();
         });
     show_capital_city();
     setTimeout(function () {//setTimeout funkcija koja ce se pozvati sve ostale potrebne funkcije 2 sekunde nakon sto se pritiskom na skip opciju ispise ime glavnog grada
@@ -125,10 +125,10 @@ $(skip_btn).click(function () {
     }, 2000);
     // press_next.remove(); //brisanje diva sa tekstom "press next button to start quiz" nakon sto pokrenemo kviz
     // removeHelp_msg();//pritiskom na next button pozivamo funkciju kojom brisemo help poruke za prethodni grad
-    // remove_empy_error();
+    // remove_empty_error();
     // click_btn.setAttribute( //pritiskom na skip opciju postavljamo vrijednost next opcije na disable kako bi izbjegli odredjeni bug 
-    //     "disabled",
-    //     "disabled"
+    //   "disabled",
+    //   "disabled"
     // );
     // $(click_btn).css("border", "none"); //ako smo odgovorili tacno a pritisnuli smo skip umjesto next postavili smo vrijednost next opcije na disable te uklonuli border kako izbor za sljedecu drzavu bio validan
 });
@@ -143,7 +143,10 @@ function displayInformation() {
 //pomoc se sastoji od broja slova koliko grad ima u svom sastavu
 //pored broja slova tu je i prvo i zadnje slovo rijeci
 function getHelp() {
-    // help_msg.innerHTML = `<span>Number of letters: ${capital_city.length} </span></br><span>First letter: ${slova[0].toUpperCase()} </span></br><span>Last letter: ${slova[capital_city.length - 1]} </span>`;
+    // help_msg.innerHTML = `<span>Number of letters: ${capital_city.length} </span></br><span>First letters: ${slova[0].toUpperCase()} </span></br><span>Last letter: ${slova[capital_city.length - 1]} </span>`;
+    /*funkcija kojom se prikazuje pomoc korisniku u vidu praznih mjesta koji oznacavaju broj slova koja nedostaju. 
+    Kao pomoc su data i odredjena slova, odnosno prvo slovo, zatim slovo koje se nalazi u sredini koje smo dobili dijeljenjem ukupnog broja slova sa 2, te zadnje slovo 
+    Postavili smo uvjet kojim provjeravamo da li je broj slova odredjenog grada paran ili ne. Ukoliko broj nije paran, za slovo koje se nalazi u sredini koristimo cjelobrojno dijeljenje*/
     let dash = "__  ";
     var x = capital_city.length / 2;
     if (capital_city.length % 2 == 0) {
@@ -158,10 +161,12 @@ function removeHelp_msg() {
     help_msg.innerHTML = `<span></span>`;
 }
 
+//funkcija za prikaz errora
 function empty_value() {
     empty_eror.innerHTML = `<span>Error: Empty Value!</span>`;
 }
 
+//funkcija za brisanje errora
 function remove_empty_error() {
     empty_eror.innerHTML = `<span></span>`;
 }
@@ -172,8 +177,10 @@ function show_capital_city() {
     help_msg.innerHTML = `<span>${capital_city}</span>`;
 }
 
-
+//pritiskom na input polje brisemo help poruku i error poruku
 $(input).click(function () {
     removeHelp_msg();
-    remove_empty_error();
+    remove_empy_error();
 })
+
+
