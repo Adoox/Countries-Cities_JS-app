@@ -14,11 +14,11 @@ const information = {}; //prazan objekat u kojeg smjestamo sve potrebne informac
 
 $(click_btn).click(function () {
     random = Math.floor(
-        Math.random() * 61
+        Math.random() * 27
     ); /*generisanje random broja koji ce predstavljati odredenu drzavu iz niza*/
     //let api = "https://restcountries.eu/rest/v2/all";
     /*let api = `https://restcountries.eu/rest/v2/name/Croatia`;*/
-    let api = `https://restcountries.eu/rest/v2/region/africa`;
+    let api = `https://restcountries.eu/rest/v2/region/oceania`;
     fetch(api)
         .then(function (response) {
             let data = response.json();
@@ -87,9 +87,9 @@ $(help_btn).click(function () {
 
 $(skip_btn).click(function () {
     random = Math.floor(
-        Math.random() * 61
+        Math.random() * 27
     ); /*generisanje random broja koji ce predstavljati odredenu drzavu iz niza*/
-    let api = `https://restcountries.eu/rest/v2/region/africa`;
+    let api = `https://restcountries.eu/rest/v2/region/oceania`;
     fetch(api)//dohvacanje apija
         .then(function (response) {//prosljedivanje odgovora odnosno zahtjeva samog apija
             let data = response.json();//podatke koje smo povukli transformisemo u json format kako bi ih mogli citati

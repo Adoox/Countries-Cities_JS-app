@@ -14,7 +14,7 @@ const information = {}; //prazan objekat u kojeg smjestamo sve potrebne informac
 
 $(click_btn).click(function () {
     random = Math.floor(
-        Math.random() * 54
+        Math.random() * 58
     ); /*generisanje random broja koji ce predstavljati odredenu drzavu iz niza*/
     //let api = "https://restcountries.eu/rest/v2/all";
     /*let api = `https://restcountries.eu/rest/v2/name/Croatia`;*/
@@ -87,7 +87,7 @@ $(help_btn).click(function () {
 
 $(skip_btn).click(function () {
     random = Math.floor(
-        Math.random() * 54
+        Math.random() * 58
     ); /*generisanje random broja koji ce predstavljati odredenu drzavu iz niza*/
     let api = `https://restcountries.eu/rest/v2/region/americas`;
     fetch(api)//dohvacanje apija
@@ -174,7 +174,7 @@ function remove_empty_error() {
 //funkcija za porikaz imena glavnog grada ukoliko korisnik odabere opciju "skip"
 function show_capital_city() {
     //poruku cemo ispisati na mjestu help poruke
-    help_msg.innerHTML = `<span>${capital_city}</span>`;
+    help_msg.innerHTML = `<span>Answer: ${capital_city}</span>`;
 }
 
 //pritiskom na input polje brisemo help poruku i error poruku

@@ -5,14 +5,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Oceania Quiz</title>
   <link rel="stylesheet" href="/style-css/style.css" />
+  <link rel="stylesheet" href="/style-css/animated.css">
+  <link rel="stylesheet" href="/style-css/region_quiz.css">
+  <script src="https://kit.fontawesome.com/a93704d780.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <title>Oceania Quiz</title>
 </head>
 
 <body>
-  <div class="developing">
-    <h2>IN DEVELOPING...</h2>
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
   </div>
+  <nav>
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-bar">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/html-pages/start_menu.html">Main Menu</a></li>
+      <li><a href="/html-pages/europe_menu.html">Europe</a></li>
+      <li><a href="/html-pages/asia_menu.html">Asia</a></li>
+      <li><a href="/html-pages/americas_menu.html">Americas</a></li>
+      <li><a href="/html-pages/africa_menu.html">Africa</a></li>
+      <li><a href="/html-pages/oceania_menu.html">Oceania</a></li>
+    </ul>
+  </nav>
+  <div class="main_div">
+    <div class="flag_place">
+      <img src="/images/quiz-img.jpg" />
+    </div>
+    <div class="text-input-box">
+      <div class="country_name">
+        <p>---</p>
+      </div>
+      <div class="input_box">
+        <input type="text" placeholder="Capital city?" class="input_place" />
+      </div>
+    </div>
+    <div class="options-buttons-box">
+      <button id="button1">Next</button>
+      <button id="button2">Check</button>
+      <button id="button3">Hint</button>
+      <button id="button4">Skip</button>
+    </div>
+    <div class="press-next-to-start">
+      <p>Press "next" button to start quiz!</p>
+    </div>
+    <div class="error-empty">
+      <p id="empty_value"></p>
+    </div>
+    <div class="help-box">
+      <p id="help-msg"></p>
+    </div>
+  </div>
+  <script src="/js-files/oceania_quiz.js"></script>
+  <script src="/js-files/navbar.js"></script>
 </body>
 
 </html>
