@@ -112,6 +112,11 @@ $(skip_btn).click(function () {
   press_next.remove(); //brisanje diva sa tekstom "press next button to start quiz" nakon sto pokrenemo kviz
   removeHelp_msg();//pritiskom na next button pozivamo funkciju kojom brisemo help poruke za prethodni grad
   remove_empy_error();
+  click_btn.setAttribute( //pritiskom na skip opciju postavljamo vrijednost next opcije na disable kako bi izbjegli odredjeni bug 
+    "disabled",
+    "disabled"
+  );
+  $(click_btn).css("border", "none"); //ako smo odgovorili tacno a pritisnuli smo skip umjesto next postavili smo vrijednost next opcije na disable te uklonuli border kako izbor za sljedecu drzavu bio validan
 });
 
 
@@ -124,7 +129,17 @@ function displayInformation() {
 //pomoc se sastoji od broja slova koliko grad ima u svom sastavu
 //pored broja slova tu je i prvo i zadnje slovo rijeci
 function getHelp() {
-  help_msg.innerHTML = `<span>Number of letters: ${capital_city.length} </span></br><span>First letter: ${slova[0].toUpperCase()} </span></br><span>Last letter: ${slova[capital_city.length - 1]} </span>`;
+  // help_msg.innerHTML = `<span>Number of letters: ${capital_city.length} </span></br><span>First letters: ${slova[0].toUpperCase()} </span></br><span>Last letter: ${slova[capital_city.length - 1]} </span>`;
+  /*funkcija kojom se prikazuje pomoc korisniku u vidu praznih mjesta koji oznacavaju broj slova koja nedostaju. 
+  Kao pomoc su data i odredjena slova, odnosno prvo slovo, zatim slovo koje se nalazi u sredini koje smo dobili dijeljenjem ukupnog broja slova sa 2, te zadnje slovo 
+  Postavili smo uvjet kojim provjeravamo da li je broj slova odredjenog grada paran ili ne. Ukoliko broj nije paran, za slovo koje se nalazi u sredini koristimo cjelobrojno dijeljenje*/
+  let dash = "__  ";
+  var x = capital_city.length / 2;
+  if (capital_city.length % 2 == 0) {
+    help_msg.innerHTML = `<span>${slova[0].toUpperCase()}${dash.repeat(capital_city.length / 2 - 1)}${slova[capital_city.length / 2]}${dash.repeat(capital_city.length - capital_city.length / 2 - 2)}${slova[capital_city.length - 1]}</span>`;
+  } else {
+    help_msg.innerHTML = `<span>${slova[0].toUpperCase()}${dash.repeat(Math.floor(x) - 1)}${slova[Math.floor(x)]}${dash.repeat(capital_city.length - Math.floor(x) - 2)}${slova[capital_city.length - 1]}</span>`;
+  }
 }
 
 //funkcija za brisanje poruka za pomoc
