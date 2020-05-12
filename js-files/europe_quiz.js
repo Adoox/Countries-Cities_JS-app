@@ -76,13 +76,13 @@ $(check_btn).click(function () {
     removeHelp_msg();
     empty_value();
   } else {
-    remove_empy_error();
+    remove_empty_error();
   }
 });
 
 $(help_btn).click(function () {
   getHelp();
-  remove_empy_error();
+  remove_empty_error();
 });
 
 $(skip_btn).click(function () {
@@ -90,10 +90,10 @@ $(skip_btn).click(function () {
     Math.random() * 54
   ); /*generisanje random broja koji ce predstavljati odredenu drzavu iz niza*/
   let api = `https://restcountries.eu/rest/v2/region/europe`;
-  fetch(api)
-    .then(function (response) {
-      let data = response.json();
-      return data;
+  fetch(api)//dohvacanje apija
+    .then(function (response) {//prosljedivanje odgovora odnosno zahtjeva samog apija
+      let data = response.json();//podatke koje smo povukli transformisemo u json format kako bi ih mogli citati
+      return data;//vracamo podatke u jason formatu koje cemo koristiti u nastavku programa
     })
     .then(function (data) {
       console.log(data);
@@ -107,16 +107,30 @@ $(skip_btn).click(function () {
       console.log(slova[0]);
     })
     .then(function () {
-      displayInformation();
+      setTimeout(function () {
+        displayInformation();
+      }, 2000);
+      // displayInformation();
     });
-  press_next.remove(); //brisanje diva sa tekstom "press next button to start quiz" nakon sto pokrenemo kviz
-  removeHelp_msg();//pritiskom na next button pozivamo funkciju kojom brisemo help poruke za prethodni grad
-  remove_empy_error();
-  click_btn.setAttribute( //pritiskom na skip opciju postavljamo vrijednost next opcije na disable kako bi izbjegli odredjeni bug 
-    "disabled",
-    "disabled"
-  );
-  $(click_btn).css("border", "none"); //ako smo odgovorili tacno a pritisnuli smo skip umjesto next postavili smo vrijednost next opcije na disable te uklonuli border kako izbor za sljedecu drzavu bio validan
+  show_capital_city();
+  setTimeout(function () {//setTimeout funkcija koja ce se pozvati sve ostale potrebne funkcije 2 sekunde nakon sto se pritiskom na skip opciju ispise ime glavnog grada
+    press_next.remove();
+    removeHelp_msg();
+    remove_empty_error();
+    click_btn.setAttribute( //pritiskom na skip opciju postavljamo vrijednost next opcije na disable kako bi izbjegli odredjeni bug 
+      "disabled",
+      "disabled"
+    );
+    $(click_btn).css("border", "none"); //ako smo odgovorili tacno a pritisnuli smo skip umjesto next postavili smo vrijednost next opcije na disable te uklonuli border kako izbor za sljedecu drzavu bio validan
+  }, 2000);
+  // press_next.remove(); //brisanje diva sa tekstom "press next button to start quiz" nakon sto pokrenemo kviz
+  // removeHelp_msg();//pritiskom na next button pozivamo funkciju kojom brisemo help poruke za prethodni grad
+  // remove_empty_error();
+  // click_btn.setAttribute( //pritiskom na skip opciju postavljamo vrijednost next opcije na disable kako bi izbjegli odredjeni bug 
+  //   "disabled",
+  //   "disabled"
+  // );
+  // $(click_btn).css("border", "none"); //ako smo odgovorili tacno a pritisnuli smo skip umjesto next postavili smo vrijednost next opcije na disable te uklonuli border kako izbor za sljedecu drzavu bio validan
 });
 
 
@@ -147,15 +161,26 @@ function removeHelp_msg() {
   help_msg.innerHTML = `<span></span>`;
 }
 
+//funkcija za prikaz errora
 function empty_value() {
   empty_eror.innerHTML = `<span>Error: Empty Value!</span>`;
 }
 
-function remove_empy_error() {
+//funkcija za brisanje errora
+function remove_empty_error() {
   empty_eror.innerHTML = `<span></span>`;
 }
 
+//funkcija za porikaz imena glavnog grada ukoliko korisnik odabere opciju "skip"
+function show_capital_city() {
+  //poruku cemo ispisati na mjestu help poruke
+  help_msg.innerHTML = `<span>${capital_city}</span>`;
+}
+
+//pritiskom na input polje brisemo help poruku i error poruku
 $(input).click(function () {
   removeHelp_msg();
   remove_empy_error();
 })
+
+
